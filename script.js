@@ -1,9 +1,13 @@
 document.getElementById("userInfoForm").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent form submission
-    if (this.checkValidity()) {  // Check if form is valid
-        displayInfo();  // Call the function to display the user information
+    // Prevent form submission
+    event.preventDefault();  
+
+    // Trigger HTML5 form validation
+    if (this.checkValidity()) {  
+        displayInfo();  // Call the function to display the user information if valid
     } else {
-        alert("Please fill in all required fields.");
+        // If the form is invalid, force the browser to show validation errors
+        alert("Please in all the required fields.");  
     }
 });
 
