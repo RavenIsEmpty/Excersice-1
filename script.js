@@ -1,6 +1,10 @@
 document.getElementById("userInfoForm").addEventListener("submit", function(event) {
     event.preventDefault();  // Prevent form submission
-    displayInfo();  // Call the function to display the user information
+    if (this.checkValidity()) {  // Check if form is valid
+        displayInfo();  // Call the function to display the user information
+    } else {
+        alert("Please fill in all required fields.");
+    }
 });
 
 function displayInfo() {
