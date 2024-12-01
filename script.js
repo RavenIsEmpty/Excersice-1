@@ -1,3 +1,8 @@
+document.getElementById("userInfoForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevent form submission
+    displayInfo();  // Call the function to display the user information
+});
+
 function displayInfo() {
     const name = document.getElementById("name").value;
     const sex = document.getElementById("sex").value;
