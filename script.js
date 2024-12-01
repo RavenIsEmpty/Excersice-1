@@ -7,7 +7,6 @@ document.getElementById("userInfoForm").addEventListener("submit", function(even
         displayInfo();  // Call the function to display the user information if valid
     } else {
         // If the form is invalid, force the browser to show validation errors
-        this.reportValidity()
         alert("Please in all the required fields.");  
     }
 });
